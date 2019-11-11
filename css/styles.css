@@ -36,3 +36,22 @@ li a:hover {
     text-align: center;
     margin-bottom: 2em;
 }
+
+ .demo-card-wide.mdl-card {
+     width: 512px;
+     margin: 1em 0.5em 1em 0.5em;
+ }
+.demo-card-wide > .mdl-card__title {
+    color: #fff;
+    height: 176px;
+    background: url('../assets/welcome_card.jpg') center / cover;
+}
+.demo-card-wide > .mdl-card__menu {
+    color: #fff;
+}
+
+.page-content{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
