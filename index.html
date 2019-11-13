@@ -1,75 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="css/styles.css">
-    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/icon.css">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/icon.css" />
     <link rel="stylesheet" href="css/material.teal-blue.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/1.0.14/webcomponents-hi.js"></script>
     <script defer src="js/material.min.js"></script>
+    <link rel="import" href="components/header/header.html" />
     <title>EMERNET E.I.N.S v1.0</title>
-</head>
-<body>
-
-<!-- Uses a header that scrolls with the text, rather than staying
+  </head>
+  <body>
+    <!-- Uses a header that scrolls with the text, rather than staying
   locked at the top -->
-<div class="mdl-layout mdl-js-layout">
-    <header class="mdl-layout__header mdl-layout__header--scroll">
-        <div class="mdl-layout__header-row">
-            <!-- Title -->
-            <span class="mdl-layout-title">EMERNET E.I.N.S</span>
-            <!-- Add spacer, to align navigation to the right -->
-            <div class="mdl-layout-spacer"></div>
-            <!-- Navigation -->
-            <nav class="mdl-navigation">
-                <a class="mdl-navigation__link" href="index.html">Home</a>
-                <a class="mdl-navigation__link" href="about.html">About</a>
-            </nav>
-        </div>
-    </header>
-    <div class="mdl-layout__drawer">
-        <span class="mdl-layout-title">Country Selection</span>
-        <nav class="mdl-navigation">
-            <a class="mdl-navigation__link" href="de/index.html">Germany</a>
-            <a class="mdl-navigation__link" href="">Austria</a>
-            <a class="mdl-navigation__link" href="">Switzerland</a>
-            <a class="mdl-navigation__link" href="">United States</a>
-        </nav>
-    </div>
-    <main class="mdl-layout__content">
+    <app-header></app-header>
+    <div class="mdl-layout mdl-js-layout">
+      <main class="mdl-layout__content">
         <div class="index-page-content">
-            <div class="demo-card-wide mdl-card mdl-shadow--2dp">
-                <div class="mdl-card__title">
-                    <h2 class="mdl-card__title-text">Country Selection</h2>
-                </div>
-                <div class="mdl-card__supporting-text">
-                    Get the information for your country by selecting one of the countries on the left.
-                </div>
-                <div class="mdl-card__actions mdl-card--border">
-                </div>
-                <div class="mdl-card__menu">
-                </div>
+          <div class="demo-card-wide mdl-card mdl-shadow--2dp">
+            <div class="mdl-card__title">
+              <h2 class="mdl-card__title-text">Country Selection</h2>
             </div>
-            <div class="demo-card-wide mdl-card mdl-shadow--2dp">
-                <div class="mdl-card__title">
-                    <h2 class="mdl-card__title-text">About</h2>
-                </div>
-                <div class="mdl-card__supporting-text">
-                    Learn more about EMERNET E.I.N.S by reading the about page.
-                </div>
-                <div class="mdl-card__actions mdl-card--border">
-                    <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="about.html">
-                        Read the About Page
-                    </a>
-                </div>
-                <div class="mdl-card__menu">
-                </div>
+            <div class="mdl-card__supporting-text">
+              Get the information for your country by selecting one of the
+              countries on the left.
             </div>
+            <div class="mdl-card__actions mdl-card--border"></div>
+            <div class="mdl-card__menu"></div>
+          </div>
+          <div class="demo-card-wide mdl-card mdl-shadow--2dp">
+            <div class="mdl-card__title">
+              <h2 class="mdl-card__title-text">About</h2>
+            </div>
+            <div class="mdl-card__supporting-text">
+              Learn more about EMERNET E.I.N.S by reading the about page.
+            </div>
+            <div class="mdl-card__actions mdl-card--border">
+              <a
+                class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect"
+                href="about.html"
+              >
+                Read the About Page
+              </a>
+            </div>
+            <div class="mdl-card__menu"></div>
+          </div>
         </div>
-    </main>
-</div>
-
-</body>
-<footer>
-</footer>
+      </main>
+    </div>
+  </body>
+  <footer></footer>
 </html>

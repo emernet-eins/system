@@ -1,0 +1,32 @@
+<template id="header-template">
+  <link
+    href="https://fonts.googleapis.com/css?family=Roboto&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="/css/icon.css" />
+  <link rel="stylesheet" href="/css/material.teal-blue.min.css" />
+  <script defer src="/js/material.min.js"></script>
+  <header class="mdl-layout__header mdl-layout__header--scroll">
+    <div class="mdl-layout__header-row">
+      <!-- Title -->
+      <span class="mdl-layout-title">EMERNET E.I.N.S</span>
+      <!-- Add spacer, to align navigation to the right -->
+      <div class="mdl-layout-spacer"></div>
+      <!-- Navigation -->
+      <nav class="mdl-navigation">
+        <a class="mdl-navigation__link" href="index.html">Home</a>
+        <a class="mdl-navigation__link" href="about.html">About</a>
+      </nav>
+    </div>
+  </header>
+  <div class="mdl-layout__drawer">
+    <span class="mdl-layout-title">Country Selection</span>
+    <nav class="mdl-navigation">
+      <a class="mdl-navigation__link" href="de/index.html">Germany</a>
+      <a class="mdl-navigation__link" href="">Austria</a>
+      <a class="mdl-navigation__link" href="">Switzerland</a>
+      <a class="mdl-navigation__link" href="">United States</a>
+    </nav>
+  </div>
+</template>
+<script src="header.js"></script>
