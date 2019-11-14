@@ -4,9 +4,13 @@
  */
 
 import AppHeader from '../../components/header/header.js';
+import AppCard from '../../components/card/card.js';
 
 const registerComponents = () => {
-  const components = [{ componentName: 'app-header', class: AppHeader }];
+  const components = [
+    { componentName: 'app-header', class: AppHeader },
+    { componentName: 'app-card', class: AppCard }
+  ];
 
   components.forEach(component => {
     customElements.define(component.componentName, component.class);

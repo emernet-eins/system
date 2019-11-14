@@ -3,7 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <script src="/src/js/main.js" type="module"></script>
+    <script src="/thirdparty/js/material-components-web.min.js"></script>
     <link rel="stylesheet" href="/thirdparty/css/icon.css" />
+    <link
+      rel="stylesheet"
+      href="/thirdparty/css/material-components-web.min.css"
+    />
+
     <link rel="stylesheet" href="/src/css/styles.css" />
     <title>EMERNET E.I.N.S v1.0</title>
   </head>
@@ -15,6 +21,26 @@
       link-titles="Home, About"
       link-hrefs="index.html, about.html"
     ></app-header>
+    <div class="mdc-layout-grid">
+      <div class="mdc-layout-grid__inner">
+        <div class="mdc-layout-grid__cell">
+          <app-card
+            image-url="/thirdparty/img/welcome_card.jpg"
+            title="Country Selection"
+            subtitle=""
+            text="Get the information for your country by selecting on of the countries on the left"
+          ></app-card>
+        </div>
+        <div class="mdc-layout-grid__cell">
+          <app-card
+            image-url="/thirdparty/img/welcome_card.jpg"
+            title="About"
+            subtitle=""
+            text="Learn more about EMERNET E.I.N.S by reading the about page."
+          ></app-card>
+        </div>
+      </div>
+    </div>
   </body>
   <footer></footer>
 </html>

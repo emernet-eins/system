@@ -19,20 +19,29 @@ class AppHeader extends HTMLElement {
     const template = `
     <script src="${JAVASCRIPT}"></script>
     <style>
-    ${SHADOW_CSS};
+    ${SHADOW_CSS}
+
+    #links {
+      color: white;
+    }
+
+    #links > a {
+      color: white;
+      text-decoration: none;
+      margin: 0 5px 0 5px;
+    }
     </style>
-      <header class="mdc-top-app-bar">
-        <div class="mdc-top-app-bar__row">
-          <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
-            <button class="material-icons mdc-top-app-bar__navigation-icon mdc-icon-button">menu</button>
-            <span class="mdc-top-app-bar__title">${title}</span>
-          </section>
-          <section id="links" class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end"></section>
-        </div>
-    </header>
+      <div class="mdc-top-app-bar__row">
+        <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
+          <button class="material-icons mdc-top-app-bar__navigation-icon mdc-icon-button">menu</button>
+          <span class="mdc-top-app-bar__title">${title}</span>
+        </section>
+        <section id="links" class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end"></section>
+      </div>
     `;
 
-    const templateContent = document.createElement('div');
+    const templateContent = document.createElement('header');
+    templateContent.classList.add('mdc-top-app-bar');
     templateContent.innerHTML = template;
 
     const shadowRoot = this.attachShadow({ mode: 'open' }).appendChild(
