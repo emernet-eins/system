@@ -1,5 +1,14 @@
 import { SHADOW_CSS, JAVASCRIPT } from '../../src/js/constants.js';
 
+/**
+ * Top bar header with links
+ *
+ * Attributes:
+ *
+ * title: The sites title to be displayed in the left corner of the top bar
+ * linksText: A with commas seperated list of link texts to appear in the top bar
+ * linksHref: A with commas seperated list of actual url for the link texts.
+ */
 class AppHeader extends HTMLElement {
   constructor() {
     super();
