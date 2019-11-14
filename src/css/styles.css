@@ -49,9 +49,3 @@ li a:hover {
 .demo-card-wide > .mdl-card__menu {
   color: #fff;
 }
-
-.index-page-content {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}

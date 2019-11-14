@@ -6,7 +6,9 @@
 
 const SHADOW_CSS = `
   @import url("/thirdparty/css/icon.css");
-  @import url("/thirdparty/css/material.teal-blue.min.css");
+  @import url("/thirdparty/css/material-components-web.min.css");
 `;
 
-export { SHADOW_CSS };
+const JAVASCRIPT = '/thirdparty/js/material-components-web.min.js';
+
+export { SHADOW_CSS, JAVASCRIPT };
