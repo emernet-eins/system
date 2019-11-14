@@ -1,3 +1,5 @@
+import { SHADOW_CSS } from '../../src/js/constants.js';
+
 class AppHeader extends HTMLElement {
   constructor() {
     super();
@@ -7,8 +9,7 @@ class AppHeader extends HTMLElement {
     const template = `
     <script src="/thirdparty/js/material.min.js"></script>
       <style>
-        @import url("/thirdparty/css/icon.css");
-        @import url("/thirdparty/css/material.teal-blue.min.css");
+        ${SHADOW_CSS};
       </style>
         <header class="mdl-layout__header mdl-layout__header--scroll">
           <div class="mdl-layout__header-row">
