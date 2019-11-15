@@ -1,4 +1,4 @@
-import { SHADOW_CSS, JAVASCRIPT } from '../../src/js/constants.js';
+import { SHADOW_CSS } from '../../src/js/constants.js';
 
 /**
  * Top bar header with links
@@ -17,40 +17,39 @@ class AppHeader extends HTMLElement {
   connectedCallback() {
     const title = this.getAttribute('title');
     const template = `
-    <script src="${JAVASCRIPT}"></script>
-    <style>
-    ${SHADOW_CSS}
+      <style>
+      ${SHADOW_CSS}
 
-    #links {
-      color: white;
-    }
+      .w3-bar {
+        display: flex;
+        align-items: center;
+      }
 
-    #links > a {
-      color: white;
-      text-decoration: none;
-      margin: 0 5px 0 5px;
-    }
-    </style>
-      <div class="mdc-top-app-bar__row">
-        <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
-          <button class="material-icons mdc-top-app-bar__navigation-icon mdc-icon-button">menu</button>
-          <span class="mdc-top-app-bar__title">${title}</span>
-        </section>
-        <section id="links" class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end"></section>
+      .bar-link-container {
+        display: flex;
+        justify-content: end;
+      }
+      </style>
+      <h2 class="w3-bar-item">${title}</h2>
+      <div class="w3-dropdown-hover">
+        <button class="w3-button">Countries</button>
+          <div class="w3-dropdown-content w3-bar-block w3-card-4">
+          <a href="#" class="w3-bar-item w3-button">Germany</a>
+          <a href="#" class="w3-bar-item w3-button">Austria</a>
+          <a href="#" class="w3-bar-item w3-button">Switzerland</a>
+            <a href="#" class="w3-bar-item w3-button">United Kingdom</a>
+            <a href="#" class="w3-bar-item w3-button">United States</a>
+        </div>
       </div>
     `;
 
-    const templateContent = document.createElement('header');
-    templateContent.classList.add('mdc-top-app-bar');
+    const templateContent = document.createElement('div');
+    templateContent.classList.add('w3-bar', 'w3-teal');
     templateContent.innerHTML = template;
 
     const shadowRoot = this.attachShadow({ mode: 'open' }).appendChild(
       templateContent.cloneNode(true)
     );
-
-    // Fix layout bug that causes content to clip into header
-    shadowRoot.style.position = 'relative';
-
     this.createLinks(shadowRoot);
   }
 
@@ -58,14 +57,13 @@ class AppHeader extends HTMLElement {
     const linksText = this.getAttribute('link-titles').split(',');
     const linksHref = this.getAttribute('link-hrefs').split(',');
 
-    const section = shadowRoot.querySelector('#links');
-
     linksText.forEach((text, index) => {
       const link = document.createElement('a');
+      link.classList.add('w3-bar-item', 'w3-button');
       link.innerText = text;
       link.href = linksHref[index];
 
-      section.appendChild(link);
+      shadowRoot.appendChild(link);
     });
   }
 }

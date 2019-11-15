@@ -1,4 +1,4 @@
-import { SHADOW_CSS, JAVASCRIPT } from '../../src/js/constants.js';
+import { SHADOW_CSS } from '../../src/js/constants.js';
 
 /**
  * Card that displays important numbers for emergency situations.
