@@ -48,6 +48,9 @@ class AppHeader extends HTMLElement {
       templateContent.cloneNode(true)
     );
 
+    // Fix layout bug that causes content to clip into header
+    shadowRoot.style.position = 'relative';
+
     this.createLinks(shadowRoot);
   }
 
@@ -55,7 +58,6 @@ class AppHeader extends HTMLElement {
     const linksText = this.getAttribute('link-titles').split(',');
     const linksHref = this.getAttribute('link-hrefs').split(',');
 
-    console.log(shadowRoot);
     const section = shadowRoot.querySelector('#links');
 
     linksText.forEach((text, index) => {
