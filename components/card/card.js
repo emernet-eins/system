@@ -1,5 +1,15 @@
 import { SHADOW_CSS, JAVASCRIPT } from '../../src/js/constants.js';
 
+/**
+ * Card that serves as navigation and info element.
+ *
+ * Attributes:
+ *
+ * image-url: Url of background-image
+ * title: Title of the card
+ * subtitle: Subtitle of the card
+ * text: Text in card body
+ */
 class AppCard extends HTMLElement {
   constructor() {
     super();
