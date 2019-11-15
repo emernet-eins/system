@@ -72,3 +72,7 @@ Good job! Now you're ready to use your component everywhere in the project with 
 ```html
 <app-your-component></app-your-component>
 ```
+
+Now, just commit and push your changes to your forked repository and create a pull request!
+
+</p>
