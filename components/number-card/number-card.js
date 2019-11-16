@@ -1,4 +1,4 @@
-import { SHADOW_CSS } from '../../src/js/constants.js';
+import { SHADOW_CSS, FONTAWESOME_CSS } from '../../src/js/constants.js';
 
 /**
  * Card that displays important numbers for emergency situations.
@@ -22,6 +22,7 @@ class AppNumberCard extends HTMLElement {
     const template = `
     <style>
     ${SHADOW_CSS}
+    ${FONTAWESOME_CSS}
 
     .w3-card {
       width: 400px;
@@ -33,10 +34,19 @@ class AppNumberCard extends HTMLElement {
       padding: 10px;
       margin: 10px 0;
     }
+
+    .phone-card-icon-container {
+      text-align: right;
+    }
     </style>
     <h2>${phoneNumber}<h2>
     <h3>${institution}</h3>
     <p>${text}</p>
+    <div class="phone-card-icon-container">
+      <a href="tel:${phoneNumber}" title="Call ${phoneNumber}">
+        <i class="fas fa-phone"></i>
+      </a>
+    </div>
     `;
 
     const templateContent = document.createElement('div');

@@ -1,4 +1,4 @@
-import { SHADOW_CSS } from '../../src/js/constants.js';
+import { SHADOW_CSS, FONTAWESOME_CSS } from '../../src/js/constants.js';
 
 /**
  * Top bar header with links
@@ -6,7 +6,7 @@ import { SHADOW_CSS } from '../../src/js/constants.js';
  * Attributes:
  *
  * title: The sites title to be displayed in the left corner of the top bar
- * linksText: A with commas seperated list of link texts to appear in the top bar
+ * fa-classes: A with commas seperated list of fontawesome classes for the link icons
  * linksHref: A with commas seperated list of actual url for the link texts.
  */
 class AppHeader extends HTMLElement {
@@ -19,6 +19,7 @@ class AppHeader extends HTMLElement {
     const template = `
       <style>
       ${SHADOW_CSS}
+      ${FONTAWESOME_CSS}
 
       .w3-bar {
         display: flex;
@@ -54,14 +55,17 @@ class AppHeader extends HTMLElement {
   }
 
   createLinks(shadowRoot) {
-    const linksText = this.getAttribute('link-titles').split(',');
+    const linksText = this.getAttribute('fa-classes').split(',');
     const linksHref = this.getAttribute('link-hrefs').split(',');
 
     linksText.forEach((text, index) => {
       const link = document.createElement('a');
       link.classList.add('w3-bar-item', 'w3-button');
-      link.innerText = text;
       link.href = linksHref[index];
+
+      const linkInner = document.createElement('i');
+      linkInner.classList.add(text.trim(), 'fas');
+      link.appendChild(linkInner);
 
       shadowRoot.appendChild(link);
     });

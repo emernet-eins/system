@@ -8,4 +8,8 @@ const SHADOW_CSS = `
   @import url("/thirdparty/css/w3.css");
 `;
 
-export { SHADOW_CSS };
+const FONTAWESOME_CSS = `
+  @import url('/thirdparty/css/all.css');
+`;
+
+export { SHADOW_CSS, FONTAWESOME_CSS };
