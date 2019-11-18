@@ -24,18 +24,31 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
-.container-content-row {
+.container-content-row-flex {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: row;
-  height: 50vh;
 }
 
-.container-content-column {
+.container-content-column-flex {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  height: 50vh;
+}
+
+.container-content-column-center {
+  text-align: center;
+}
+
+.container-content-column-center > a {
+  display: inline-block;
+  margin: 15px 5px;
+}
+
+.text-container {
+  width: 50%;
+  text-align: justify;
+  margin: 0 auto;
 }
