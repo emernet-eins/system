@@ -51,7 +51,10 @@ class AppHeader extends HTMLElement {
     const shadowRoot = this.attachShadow({ mode: 'open' }).appendChild(
       templateContent.cloneNode(true)
     );
-    this.createLinks(shadowRoot);
+
+    if (this.getAttribute('fa-classes') !== '') {
+      this.createLinks(shadowRoot);
+    }
   }
 
   createLinks(shadowRoot) {
