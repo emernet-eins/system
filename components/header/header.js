@@ -33,7 +33,7 @@ class AppHeader extends HTMLElement {
       </style>
       <h2 class="w3-bar-item">${title}</h2>
       <div class="w3-dropdown-hover">
-        <button class="w3-button">Countries</button>
+        <button class="w3-button fas fa-globe-americas"></button>
           <div class="w3-dropdown-content w3-bar-block w3-card-4">
           <a href="#" class="w3-bar-item w3-button">Germany</a>
           <a href="#" class="w3-bar-item w3-button">Austria</a>
