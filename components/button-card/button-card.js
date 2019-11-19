@@ -51,6 +51,10 @@ class AppButtonCard extends HTMLElement {
           padding: 10px;
         }
 
+        .w3-card > h3 {
+          padding: 0 10px;
+        }
+
         .button-card-mid {
             display: flex;
             justify-content: center;
