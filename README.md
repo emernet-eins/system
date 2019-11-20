@@ -17,3 +17,4 @@ Code of Conduct
 ===== 
 Before you contribute, please have a look at <a href="https://github.com/emernet-eins/system/blob/master/CODE_OF_CONDUCT.md">our Code of Conduct</a>.
 
+This README is not final and will get expanded over time.
