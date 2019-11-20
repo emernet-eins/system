@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <script src="/src/js/main.js" type="module"></script>
+    <link rel="stylesheet" href="/src/css/styles.css" />
+    <title>EMERNET E.I.N.S v1.0</title>
+  </head>
+  <body>
+    <app-header
+      title="EMERNET E.I.N.S"
+      fa-classes="fa-home, fa-phone, fa-info"
+      link-hrefs="/pages/us/, /pages/us/numbers.html, /pages/us/about.html"
+    ></app-header>
+    <div class="container-content-column-flex">
+      <app-number-card
+        number="911"
+        institution="Police"
+        text="Call this number when you're having a very urgent emergency"
+      >
+      </app-number-card>
+
+      <app-number-card
+        number="1-800-222-1222"
+        institution="Poison Control Center"
+        text="Call this number when you have an emergency involving poison."
+      >
+      </app-number-card>
+    </div>
+  </body>
+</html>
+<!-- Please use this as a template for a new country numbers.html, as we want to have the same markup across all files.
+    You can completely copy and re-use it, just make sure to translate and adjust everything accordingly.
+-->
