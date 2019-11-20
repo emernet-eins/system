@@ -3,10 +3,13 @@
 This file serves to help you contributing to this project.
 If something is unclear, poorly described or simply wrong, please either raise and issue, or create a pull request with your fixes. More on that <a href="#fixing-typo">here</a>.
 
+<h4>Thanks for contributing!</h4>
+
 I want to:
 
 - <a href="#fixing-typo">Fix a typo / grammar / formatting / etc.</a>
 - <a href="#add-component">Add a new component</a>
+- <a href="#add-country">Add a country</a>
 
 <p id="fixing-typo">
 <h2>Fixing a typo / grammar / formatting / etc.</h2>
@@ -74,5 +77,33 @@ Good job! Now you're ready to use your component everywhere in the project with 
 ```
 
 Now, just commit and push your changes to your forked repository and create a pull request!
+
+</p>
+
+<p id="add-country">
+<h2>Add a country</h2>
+
+EMERNET is split up by countries. Here's a step-by-step guide about how to add a new one.
+
+- fork this repository
+- create a branch in your fork (please give it a descriptive name like "add bla-bla-land")
+
+Now, you can add the pages of the country you want to add.
+Countries consist of three pages:
+
+- index.html
+- numbers.html
+- about.html
+
+So to add a country, create a sub-directory in `pages`, named like the country code of the country you want to add (us for USA, de for Germany, en for United Kindom, you get the idea).
+
+From the `templates` folder, copy the index.html, about.html, and numbers.html to your new country directory. Translate the template pages to the country's language, and adjust the numbers.html page by changing, adding, and removing numbers. Also, don't forget to add the new country to the header! To do that, open `/components/header/header.js` and add a new link to the dropdown menu in the component's markup.
+
+Also, please adjust the links in each header in index.html, about.html, and numbers.html.
+When dealing with links, please use the whole path e. g. `/pages/country/index.html`.
+
+That's it! Now commit and push your changes, then simply create a pull request. If you have a source for the numbers you added, please include it in the pull request.
+
+After it got reviewed (basically just proof-reading and having a look at the links), your pull request will get merged.
 
 </p>
