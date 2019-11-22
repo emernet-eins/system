@@ -38,7 +38,7 @@ class AppHeader extends HTMLElement {
           <a href="/pages/de/" class="w3-bar-item w3-button">Deutschland</a>
           <a href="#" class="w3-bar-item w3-button">Österreich</a>
           <a href="/pages/ch/" class="w3-bar-item w3-button">Schweiz</a>
-            <a href="#/pages/uk/ class="w3-bar-item w3-button">United Kingdom</a>
+            <a href="/pages/uk/" class="w3-bar-item w3-button">United Kingdom</a>
             <a href="/pages/us/" class="w3-bar-item w3-button">United States</a>
         </div>
       </div>
