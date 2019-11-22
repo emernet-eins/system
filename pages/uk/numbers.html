@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <script src="/src/js/main.js" type="module"></script>
+    <link rel="stylesheet" href="/src/css/styles.css" />
+    <title>EMERNET E.I.N.S v1.0</title>
+  </head>
+  <body>
+    <app-header
+      title="EMERNET E.I.N.S"
+      fa-classes="fa-home, fa-phone, fa-info"
+      link-hrefs="/pages/uk/, /pages/uk/numbers.html, /pages/uk/about.html"
+    ></app-header>
+    <div class="container-content-column-flex">
+      <app-number-card
+        number="999"
+        institution="Police, Fire, Ambulance"
+        text="Call this number when you're having a very urgent emergency."
+      >
+      </app-number-card>
+
+      <app-number-card
+        number="0800111999"
+        institution="Gas emergency"
+        text="Call this number when you have an emergency involving poison."
+      >
+      </app-number-card>
+
+      <app-number-card
+        number="08454647"
+        institution="24 Hour Health Service"
+        text="Call this number when you have an health emergency."
+      >
+      </app-number-card>
+    </div>
+  </body>
+</html>
