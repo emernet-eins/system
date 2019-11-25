@@ -3,7 +3,7 @@
  */
 class AppSystemInformation extends HTMLElement {
   constructor() {
-    super()
+    super();
   }
 
   connectedCallback() {
@@ -33,17 +33,18 @@ class AppSystemInformation extends HTMLElement {
         Host system:
         <span id="app-system-information-host"></span>
       </span>
-    `
+    `;
 
-    const templateContent = document.createElement('div')
-    templateContent.classList.add('app-system-information')
-    templateContent.innerHTML = template
+    const templateContent = document.createElement('div');
+    templateContent.classList.add('app-system-information');
+    templateContent.innerHTML = template;
 
     const shadowRoot = this.attachShadow({ mode: 'open' }).appendChild(
       templateContent.cloneNode(true)
-    )
+    );
 
-    this.writeVersion(shadowRoot)
+    this.writeVersion(shadowRoot);
+    this.writeHostsystem(shadowRoot);
   }
 
   writeVersion(shadowRoot) {
@@ -54,8 +55,31 @@ class AppSystemInformation extends HTMLElement {
           (shadowRoot.querySelector(
             '#app-system-information-version'
           ).innerText = text)
+      );
+  }
+
+  writeHostsystem(shadowRoot) {
+    fetch('/systeminfo.md')
+      .then(res => {
+        if (res.ok) {
+          return res.text();
+        } else {
+          throw new Error("Couldn't find systeminfo.md");
+        }
+      })
+      .then(
+        text =>
+          (shadowRoot.querySelector(
+            '#app-system-information-host'
+          ).innerText = text)
       )
+      .catch(err => {
+        console.error(err);
+        shadowRoot.querySelector(
+          '#app-system-information-host'
+        ).innerText = err;
+      });
   }
 }
 
-export default AppSystemInformation
+export default AppSystemInformation;
