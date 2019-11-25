@@ -31,7 +31,7 @@ If you don't have any webserver installed, option one is recommended. If you alr
 
 # Updating
 
-If you installed EMERNET via the installer, it should automatically upate itself if you didn't terminate the .jar file. If you did or want to trigger the update by yourself, simply run <a href="https://github.com/emernet-eins/server/releases/">emernet_runtime_version.jar</a> again.
+If you installed EMERNET via the installer, it should automatically update itself if you didn't terminate the .jar file. If you did or want to trigger the update by yourself, simply run <a href="https://github.com/emernet-eins/server/releases/">emernet_runtime_version.jar</a> again.
 
 If you installed EMERNET by hand, you can simply download the latest <a href="https://github.com/emernet-eins/system/releases">release</a> and override it with the contents of your webserver.
 
