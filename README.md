@@ -174,6 +174,7 @@ This is how we use the donations:
 <h2 align="center" id="specialthanks">Special Thanks to</h2>
 <p align="center">(In chronological order)</p>
 
-* @google for [Material.io](http://material.io/), which provides our (beautiful) design
+* @W3schools for [W3CSS](https://www.w3schools.com/w3css/), which provides our (beautiful) design
+* Fontawesome for well... [Fontawesome](https://fontawesome.com)
 * Everyone who has helped making EMERNET what it is today
 * Everyone I forgot to mention here, but also influenced EMERNET.
