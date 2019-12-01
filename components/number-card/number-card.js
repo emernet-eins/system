@@ -1,4 +1,8 @@
-import { SHADOW_CSS, FONTAWESOME_CSS } from '../../src/js/constants.js';
+import {
+  SHADOW_CSS,
+  FONTAWESOME_CSS,
+  RESPONSIVE_CSS_CARD
+} from '../../src/js/constants.js';
 
 /**
  * Card that displays important numbers for emergency situations.
@@ -38,6 +42,8 @@ class AppNumberCard extends HTMLElement {
     .phone-card-icon-container {
       text-align: right;
     }
+
+    ${RESPONSIVE_CSS_CARD}
     </style>
     <h2>${phoneNumber}<h2>
     <h3>${institution}</h3>

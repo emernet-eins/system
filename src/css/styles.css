@@ -54,3 +54,13 @@ body {
   text-align: justify;
   margin: 0 auto;
 }
+
+/**
+* Responsiveness
+*/
+/* SMARTPHONES PORTRAIT */
+@media only screen and (min-width: 300px) {
+  .container-content-row-flex {
+    flex-direction: column;
+  }
+}

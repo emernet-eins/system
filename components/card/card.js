@@ -1,4 +1,4 @@
-import { SHADOW_CSS } from '../../src/js/constants.js';
+import { SHADOW_CSS, RESPONSIVE_CSS_CARD } from '../../src/js/constants.js';
 
 /**
  * Card that serves as navigation and info element.
@@ -48,6 +48,8 @@ class AppCard extends HTMLElement {
         .w3-card > p {
           padding: 10px;
         }
+
+        ${RESPONSIVE_CSS_CARD}
         </style>
         ${
           imageUrl

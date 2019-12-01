@@ -1,4 +1,4 @@
-import { SHADOW_CSS } from '../../src/js/constants.js';
+import { SHADOW_CSS, RESPONSIVE_CSS_CARD } from '../../src/js/constants.js';
 
 /**
  * Card that serves as navigation and info element.
@@ -63,6 +63,8 @@ class AppButtonCard extends HTMLElement {
         .button-card-mid > a {
             margin: 5px;
         }
+
+        ${RESPONSIVE_CSS_CARD}
         </style>
         ${
           imageUrl
