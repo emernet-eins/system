@@ -1,3 +1,5 @@
+import Version from '/src/lib/version.js';
+
 /**
  * This is the system information component. It displays distributor, Version, and host system.
  */
@@ -47,18 +49,15 @@ class AppSystemInformation extends HTMLElement {
     this.writeHostsystem(shadowRoot);
   }
 
-  writeVersion(shadowRoot) {
-    fetch('/version.md')
-      .then(res => res.text())
-      .then(
-        text =>
-          (shadowRoot.querySelector(
-            '#app-system-information-version'
-          ).innerText = text)
-      );
+  async writeVersion(shadowRoot) {
+    const span = shadowRoot.querySelector('#app-system-information-version');
+    span.innerText = await Version.getVersion().catch(
+      err => (span.innerText = err)
+    );
   }
 
   writeHostsystem(shadowRoot) {
+    const span = shadowRoot.querySelector('#app-system-information-host');
     fetch('/systeminfo.md')
       .then(res => {
         if (res.ok) {
@@ -67,17 +66,10 @@ class AppSystemInformation extends HTMLElement {
           throw new Error("Couldn't find systeminfo.md");
         }
       })
-      .then(
-        text =>
-          (shadowRoot.querySelector(
-            '#app-system-information-host'
-          ).innerText = text)
-      )
+      .then(text => (span.innerText = text))
       .catch(err => {
         console.error(err);
-        shadowRoot.querySelector(
-          '#app-system-information-host'
-        ).innerText = err;
+        span.innerText = err;
       });
   }
 }
