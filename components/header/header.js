@@ -26,20 +26,40 @@ class AppHeader extends HTMLElement {
         align-items: center;
       }
 
+      .logo {
+        width: 50px;
+        height: 50px;
+        background: url("/thirdparty/img/logo.jpg") center no-repeat;
+        background-size: contain;
+        display: none;
+      }
+
       .bar-link-container {
         display: flex;
         justify-content: end;
       }
+
+      @media only screen and (max-width: 360px) {
+        .logo {
+          display: block;
+        }
+
+        #title {
+          display: none;
+        }
+      }
       </style>
-      <h2 class="w3-bar-item">${title}</h2>
+      
+      <h2 id="title" class="w3-bar-item">${title}</h2>
+      <div class="logo"></div>
       <div class="w3-dropdown-hover">
-        <button class="w3-button fas fa-globe-americas"></button>
-          <div class="w3-dropdown-content w3-bar-block w3-card-4">
+      <button class="w3-button fas fa-globe-americas"></button>
+        <div class="w3-dropdown-content w3-bar-block w3-card-4">
           <a href="/pages/de/" class="w3-bar-item w3-button">Deutschland</a>
           <a href="/pages/at/" class="w3-bar-item w3-button">Österreich</a>
           <a href="/pages/ch/" class="w3-bar-item w3-button">Schweiz</a>
-            <a href="/pages/uk/" class="w3-bar-item w3-button">United Kingdom</a>
-            <a href="/pages/us/" class="w3-bar-item w3-button">United States</a>
+          <a href="/pages/uk/" class="w3-bar-item w3-button">United Kingdom</a>
+          <a href="/pages/us/" class="w3-bar-item w3-button">United States</a>
         </div>
       </div>
     `;
