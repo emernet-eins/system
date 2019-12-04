@@ -12,14 +12,4 @@ const FONTAWESOME_CSS = `
   @import url('/thirdparty/css/all.css');
 `;
 
-const RESPONSIVE_CSS_CARD = `
-  /* SMARTPHONES PORTRAIT */
-  @media only screen and (min-width: 300px) {
-    .w3-card {
-      width: 315px;
-      margin: 5px 0;
-    }
-  }
-`;
-
-export { SHADOW_CSS, FONTAWESOME_CSS, RESPONSIVE_CSS_CARD };
+export { SHADOW_CSS, FONTAWESOME_CSS };
