@@ -65,7 +65,7 @@ class AppButtonCard extends HTMLElement {
         }
 
         /* SMARTPHONES PORTRAIT */
-        @media only screen and (max-width: 360px) {
+        @media only screen and (max-width: 414px) {
           .w3-card {
             width: 315px;
             margin: 5px 0;
