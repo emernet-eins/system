@@ -64,6 +64,14 @@ class AppButtonCard extends HTMLElement {
             margin: 5px;
         }
 
+        /* SMARTPHONES PORTRAIT */
+        @media only screen and (max-width: 360px) {
+          .w3-card {
+            width: 315px;
+            margin: 5px 0;
+          }
+        }
+
         </style>
         ${
           imageUrl

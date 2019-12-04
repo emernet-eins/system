@@ -39,6 +39,14 @@ class AppNumberCard extends HTMLElement {
       text-align: right;
     }
 
+    /* SMARTPHONES PORTRAIT */
+    @media only screen and (max-width: 360px) {
+      .w3-card {
+        width: 315px;
+        margin: 5px 0;
+      }
+    }
+
     </style>
     <h2>${phoneNumber}<h2>
     <h3>${institution}</h3>

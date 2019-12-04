@@ -36,8 +36,7 @@ class AppCard extends HTMLElement {
           background-size: cover;
           display: flex;
           align-content: end;
-          color:
-          #fff;
+          color: #fff;
           padding: 10px;
         }
 
@@ -47,6 +46,14 @@ class AppCard extends HTMLElement {
 
         .w3-card > p {
           padding: 10px;
+        }
+
+        /* SMARTPHONES PORTRAIT */
+        @media only screen and (max-width: 360px) {
+          .w3-card {
+            width: 315px;
+            margin: 5px 0;
+          }
         }
 
         </style>
