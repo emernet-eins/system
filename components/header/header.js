@@ -27,30 +27,22 @@ class AppHeader extends HTMLElement {
       }
 
       .logo {
-        width: 50px;
-        height: 50px;
-        background: url("/thirdparty/img/logo.jpg") center no-repeat;
+        width: 75px;
+        height: 75px;
+        background: url("/thirdparty/img/logo.png") center no-repeat;
         background-size: contain;
-        display: none;
+      }
+
+      .fas {
+        font-size: 18px;
       }
 
       .bar-link-container {
         display: flex;
         justify-content: end;
       }
-
-      @media only screen and (max-width: 360px) {
-        .logo {
-          display: block;
-        }
-
-        #title {
-          display: none;
-        }
-      }
       </style>
       
-      <h2 id="title" class="w3-bar-item">${title}</h2>
       <div class="logo"></div>
       <div class="w3-dropdown-hover">
       <button class="w3-button fas fa-globe-americas"></button>
