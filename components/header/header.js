@@ -5,7 +5,6 @@ import { SHADOW_CSS, FONTAWESOME_CSS } from '../../src/js/constants.js';
  *
  * Attributes:
  *
- * title: The sites title to be displayed in the left corner of the top bar
  * fa-classes: A with commas seperated list of fontawesome classes for the link icons
  * linksHref: A with commas seperated list of actual url for the link texts.
  */
@@ -15,7 +14,6 @@ class AppHeader extends HTMLElement {
   }
 
   connectedCallback() {
-    const title = this.getAttribute('title');
     const template = `
       <style>
       ${SHADOW_CSS}
