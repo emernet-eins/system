@@ -29,7 +29,7 @@ class AppButtonCard extends HTMLElement {
 
         .w3-card {
           width: 400px;
-          margin: 0 10px;
+          margin: 5px 10px;
           padding: 0;
         }
 
@@ -63,6 +63,15 @@ class AppButtonCard extends HTMLElement {
         .button-card-mid > a {
             margin: 5px;
         }
+
+        /* SMARTPHONES PORTRAIT */
+        @media only screen and (max-width: 414px) {
+          .w3-card {
+            width: 315px;
+            margin: 5px 0;
+          }
+        }
+
         </style>
         ${
           imageUrl
