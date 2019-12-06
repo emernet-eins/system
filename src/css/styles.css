@@ -54,3 +54,13 @@ body {
   text-align: justify;
   margin: 0 auto;
 }
+
+noscript {
+  color: #f35811;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 97vh;
+  font-size: large;
+  font-weight: 900;
+}
