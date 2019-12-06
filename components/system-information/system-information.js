@@ -30,7 +30,9 @@ class AppSystemInformation extends HTMLElement {
         Version: 
         <span id="app-system-information-version"></span>
       </span>
-      <span>Distributed by EMERNET E.I.N.S.org</span>
+      <span>Distributed by 
+        <span id="app-system-information-deployer">EMERNET E.I.N.S.org</span>
+      </span>
       <span>
         Host system:
         <span id="app-system-information-host"></span>
@@ -47,6 +49,7 @@ class AppSystemInformation extends HTMLElement {
 
     this.writeVersion(shadowRoot);
     this.writeHostsystem(shadowRoot);
+    this.writeDeployer(shadowRoot);
   }
 
   async writeVersion(shadowRoot) {
@@ -70,6 +73,22 @@ class AppSystemInformation extends HTMLElement {
       .catch(err => {
         console.error(err);
         span.innerText = err;
+      });
+  }
+
+  writeDeployer(shadowRoot) {
+    const span = shadowRoot.querySelector('#app-system-information-deployer');
+    fetch('/deployer.md')
+      .then(res => {
+        if (res.ok) {
+          return res.text();
+        }
+        throw new Error("Couldn't find deployer.md");
+      })
+      .then(text => (span.innerText = text))
+      .catch(err => {
+        console.error(err);
+        span.innerText = 'unknown';
       });
   }
 }
