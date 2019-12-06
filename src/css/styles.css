@@ -63,4 +63,28 @@ noscript {
   height: 97vh;
   font-size: large;
   font-weight: 900;
+
+/**
+* Responsiveness
+*/
+/* SMARTPHONES PORTRAIT */
+@media only screen and (max-width: 360px) {
+  .container-content-row-flex {
+    flex-direction: column;
+  }
+
+  .text-container {
+    width: 70%;
+  }
+}
+
+/** TABLET */
+@media only screen and (max-width: 768px) {
+  .container-content-row-flex {
+    flex-direction: column;
+  }
+
+  .text-container {
+    width: 70%;
+  }
 }
