@@ -24,11 +24,10 @@ class AppHeader extends HTMLElement {
         align-items: center;
       }
 
-      .logo {
+      img {
         width: 75px;
         height: 75px;
-        background: url("/thirdparty/img/logo.png") center no-repeat;
-        background-size: contain;
+        margin: 10px;
       }
 
       .fas {
@@ -41,7 +40,7 @@ class AppHeader extends HTMLElement {
       }
       </style>
       
-      <div class="logo"></div>
+      <img src="/thirdparty/img/logo.svg" />
       <div class="w3-dropdown-hover">
       <button class="w3-button fas fa-globe-americas"></button>
         <div class="w3-dropdown-content w3-bar-block w3-card-4">
